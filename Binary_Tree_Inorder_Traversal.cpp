@@ -34,7 +34,7 @@ TreeNode* CreateBiTree()
 class solution 
 {
 public:
-	/*/// ·ÇµÝ¹é
+	/*
 	vector<int> inorderTraversal(TreeNode* root)
 	{
 		vector<int> path;
