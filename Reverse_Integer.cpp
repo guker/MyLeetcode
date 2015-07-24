@@ -1,6 +1,6 @@
 ///++++++++++++++++++++++++++++++++++++++++ 
 ///
-/// ¹Ø¼üÎÊÌâ overflow/underflow
+/// keyï¼šoverflow/underflow
 ///
 ///++++++++++++++++++++++++++++++++++++++++
 #include<iostream>
@@ -11,8 +11,8 @@ class Solution
 public:
 	int reverse(int x)
 	{
-		const int max = 0x7fffffff; /// int×î´óÖµ
-		const int min = 0x80000000;/// int×îĞ¡Öµ
+		const int max = 0x7fffffff; /// intæœ€å¤§å€¼
+		const int min = 0x80000000;/// intæœ€å°å€¼
 		long long sum = 0;
 
 		while(x != 0)

@@ -10,7 +10,7 @@ public:
 	{
 		if(&str[0] == NULL)
 			return 0;
-		// ignore prefix blank
+		// 忽略前缀空格
 		int i = 0;
 		while( str[i] != '\0' && str[i] == ' ')
 			++i;
@@ -49,7 +49,7 @@ public:
 			}
 			++i;
 		
-			if(i == len) /// out of range
+			if(i == len) ///避免string的越界引用
 				break;
 		
 		}

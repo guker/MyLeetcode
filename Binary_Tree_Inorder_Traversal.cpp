@@ -34,7 +34,7 @@ TreeNode* CreateBiTree()
 class solution 
 {
 public:
-	/*/// �ǵݹ�
+	/* 非递归版本，使用递归与栈的联系
 	vector<int> inorderTraversal(TreeNode* root)
 	{
 		vector<int> path;
@@ -60,6 +60,7 @@ public:
 		return path;
 	}
 	*/ 
+	/// 递归版本
 	vector<int> result;
 	void inorder(TreeNode* root)
 	{
