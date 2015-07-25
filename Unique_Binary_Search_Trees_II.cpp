@@ -16,6 +16,7 @@ struct TreeNode
 class solution 
 {
 public:
+        ///递归
 	vector<TreeNode*> generateTrees(int n)
 	{
 		return createTree(1,n);
