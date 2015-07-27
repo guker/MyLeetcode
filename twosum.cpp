@@ -13,7 +13,7 @@ public:
 		int len = nums.size();
 		for(int i = 0; i < len; ++i)
 		{
-			if(!mp.count(nums[i])) // count()函数返回map中匹配的个数，否则返回zero
+			if(!mp.count(nums[i])) // count()鍑芥暟杩斿洖map涓尮閰嶇殑涓暟锛屽惁鍒欒繑鍥瀦ero
 			{
 				mp.insert(std::pair<int,int>(nums[i],i));
 			}
@@ -50,4 +50,5 @@ int main()
 		std::cout<<results[i]<<std::endl;
 	}
 	return true;
+	
 }
