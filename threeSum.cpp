@@ -18,11 +18,11 @@ vector<vector<int> > threeSum(vector<int> &num)
 {
 	vector<vector<int> > ret;
 	ret.clear();
-	/// 排序
+	/// 鎺掑簭
 	std::sort(num.begin(),num.end());
 	for(int i = 0;i !=num.size();i++)
 	{
-		/// 去重
+		/// 鍘婚噸
 		if(i>0&&num[i] == num[i-1])
 			continue;
 		int j,k;
@@ -30,13 +30,13 @@ vector<vector<int> > threeSum(vector<int> &num)
 		k = num.size()-1;
 		while(j<k)
 		{
-			/// 去重
+			/// 鍘婚噸
 			if(j>i+1&&num[j]==num[j-1])
 			{
 				j++;
 				continue;
 			}
-			/// 去重
+			//// 鍘婚噸
 			if(k<num.size()-1&&num[k]==num[k+1])
 			{
 				k--;
@@ -65,11 +65,11 @@ vector<vector<int> > threeSum(vector<int> &num,bool hasmap)
 {
 	vector<vector<int> > ret;
 	ret.clear();
-	/// 排序
+
 	std::sort(num.begin(),num.end());
 	for(int i= 0;i != num.size();i++)
 	{
-		//去重
+		/// 鍘婚噸
 		if (i != 0 && num[i] == num[i-1])  
                 continue;  
 		int j = i+1;
