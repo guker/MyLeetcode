@@ -57,16 +57,16 @@ vector<vector<int> > threeSum(vector<int> num, int target) {
     return result;
 }
 
-/// writed by hqwsky using map
+/// writed by hqwsky using map  overload
 vector<vector<int> > threeSum(vector<int> &num,int target,bool hasmap)
 {
 	vector<vector<int> > ret;
 	ret.clear();
-	/// ≈≈–Ú
+	/// √Ö√Ö√ê√≤
 	std::sort(num.begin(),num.end());
 	for(int i= 0;i != num.size();i++)
 	{
-		//»•÷ÿ
+		//√à¬•√ñ√ò
 		if (i != 0 && num[i] == num[i-1])  
                 continue;  
 		int j = i+1;
