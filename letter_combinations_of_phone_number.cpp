@@ -33,7 +33,7 @@ vector<string>  letterCombinations(const string& digits)
 
 	  for(int i=0;i<digits.size();i++)
 	  {
-		  /// 遇到非法输入
+		  /// 閬囧埌闈炴硶杈撳叆
 		  if(!isdigit(digits[i]))
 		  {
 			  vector<string> r;
