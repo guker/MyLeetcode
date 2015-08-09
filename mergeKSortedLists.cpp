@@ -7,7 +7,7 @@
 #include<iostream>
 #include<string>
 #include<vector>
-//#include<queue>
+#include<queue>
 #include<algorithm>
 
 
@@ -22,14 +22,14 @@ struct ListNode
 };
 
 /// meger two lists
-// ºÏ²¢Á½¸öÓĞĞòÁ´±í  
+// åˆå¹¶ä¸¤ä¸ªæœ‰åºé“¾è¡¨  
 ListNode * MergeSortedList(ListNode * pHead1, ListNode * pHead2)  
 {
 	if(pHead1 == NULL)
 		return pHead2;
 	if(pHead2 == NULL)
 		return pHead1;
-	///³õÊ¼»¯Í·Ö¸Õë
+	///åˆå§‹åŒ–å¤´æŒ‡é’ˆ
 	ListNode* pHeadMerged = NULL;
 	if(pHead1->val < pHead2->val)
 	{
@@ -98,20 +98,21 @@ public:
     }  
 }; 
 
-/// ÓÅÏÈ¶ÓÁĞ
+/// ä¼˜å…ˆé˜Ÿåˆ—
 ListNode *mergeKLists(vector<ListNode *> &lists) {  
     // Note: The Solution object is instantiated only once and is reused by each test case.  
     if (lists.empty())  
         return NULL;
-    // ¶¨ÒåÓÅÏÈ¶ÓÁĞ£¬×îĞ¡¶ÑÊµÏÖ	
+    // å®šä¹‰ä¼˜å…ˆé˜Ÿåˆ—ï¼Œæœ€å°å †å®ç°	
     priority_queue<ListNode*,vector<ListNode*>,ListNodeCompare> Q;  
     for(int i=0;i<lists.size();i++)  
 	{
         if ( lists[i]!=NULL)  
             Q.push(lists[i]); 
 	}
-	/// ĞÂ½¨Á´±í,ÉèÖÃÍ·½áµã
+	/// æ–°å»ºé“¾è¡¨,è®¾ç½®å¤´ç»“ç‚¹ï¼Œå‚€å„¡ç»“ç‚¹dummy
     ListNode guard(-1);  
+    ///  å°¾æŒ‡é’ˆï¼Œå§‹ç»ˆæŒ‡å‘é“¾è¡¨çš„å°¾éƒ¨ï¼Œå¸¸ç”¨äºæ„å»ºé“¾è¡¨è®°å½•å°¾ç»“ç‚¹çš„ä½ç½®
     ListNode* tail=&guard;  
     while(!Q.empty())  
     {  
