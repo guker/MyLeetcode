@@ -110,8 +110,9 @@ ListNode *mergeKLists(vector<ListNode *> &lists) {
         if ( lists[i]!=NULL)  
             Q.push(lists[i]); 
 	}
-	/// 新建链表,设置头结点
+	/// 新建链表,设置头结点，傀儡结点dummy
     ListNode guard(-1);  
+    /// 尾指针，始终指向链表的尾部，常用于构建链表记录尾结点的位置
     ListNode* tail=&guard;  
     while(!Q.empty())  
     {  
