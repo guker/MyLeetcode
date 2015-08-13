@@ -41,6 +41,48 @@ int maxSubArray2(int A[], int n);
 int max(int x, int y){
     return x>y?x:y;
 }
+/* O(n3)算法，算法本身很容易理解，而且很直观的感觉做了很多无用操作。
+例如：i = 0, j = 3时，会计算a[0] + a[1] +…+ a[3]；而当i = 0, j = 4时候又会计算a[0] + a[1] +…a[4]。
+*/
+long maxSubSum1(const vector<int>& a) 
+{ 
+       long maxSum = 0; 
+       for (int i = 0; i < a.size(); i++) 
+       { 
+              for (int j = i; j < a.size(); j++) 
+              { 
+                     long thisSum = 0; 
+ 
+                     for (int k = i; k <= j; k++) 
+                     { 
+                            thisSum += a[k]; 
+                     } 
+                     if (thisSum > maxSum) 
+                            maxSum = thisSum; 
+              } 
+       } 
+       return maxSum; 
+} 
+
+/*
+* O(n2)算法，thisSum表示a[i] + a[i+1] + … + a[j-1]
+*
+*/
+long maxSubSum2(const vector<int>& a) 
+{ 
+       long maxSum = 0; 
+       for (int i = 0; i < a.size(); i++) 
+       { 
+              long thisSum = 0; 
+              for (int j = i; j < a.size(); j++) 
+              { 
+                     thisSum += a[j]; 
+                     if (thisSum > maxSum) 
+                            maxSum = thisSum; 
+              } 
+       } 
+       return maxSum; 
+}
 
 int maxSubArray(int A[], int n)
 {
@@ -49,7 +91,7 @@ int maxSubArray(int A[], int n)
     }
     return maxSubArray2(A, n);
 }
-
+/// 线性算法O(n)
 int maxSubArray1(int A[], int n)
 {
     int *sum = new int[n];
