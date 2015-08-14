@@ -33,9 +33,14 @@ void generator(vector<string>& result, int left, int right, string s){
         result.push_back(s);
         return;
     }
+	//左括弧的个数有剩余，则往字符串中添加一个左括弧
+   // 需要再定义一个字符串变量，否则会影响后续程序
+   // 再递归时，左括弧个数减一，此处不要改变n0的值，否则影响后续程序
     if (left>0){
         generator(result, left-1, right, s +'(');
     }
+	 //右括弧的个数有剩余，且右括弧剩余的数量多于左括弧
+     //即当前字符串中左括弧多于右括弧，才将右括弧加入到字符串中
     if (right>0 && right>left){
         generator(result, left, right-1, s+')');
     }
